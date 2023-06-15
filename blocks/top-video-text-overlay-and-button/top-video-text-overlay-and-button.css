@@ -1,0 +1,210 @@
+
+.video-wrapper
+{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.video-js {
+  display: block;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #000;
+  position: relative;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  font-family: Arial,Helvetica,sans-serif;
+  word-break: initial;
+  width: 100%;
+  max-width: 100%;
+}
+
+.video-js .vjs-tech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-video {
+  display: none;
+}
+
+.desktop-video .video-js {
+  padding-top: 36%;
+  height: 0;
+  /* margin-top: -47px; */
+}
+
+.vjs-control-bar {
+  display: none !important;
+}
+
+.top-video-text-overlay-and-button-container
+{
+  position: relative;
+}
+
+.top-video-text-overlay-and-button-wrapper {
+  background-image: url("/assets/imgs/top-video-text-overlay-and-button-wrapper-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 240px;
+  z-index: 1000;
+  max-width: 100% !important;
+  padding-top: 81px;
+}
+
+.top-video-text-overlay-and-button  {
+  color: #0047BB;
+  text-align: left;
+  font-family: 'proxima_novabold';
+  font-size: 23px;
+  line-height: 25px;
+  padding-top: 16px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.top-video-text-overlay-and-button > div {
+  width: 100%;
+  max-width: 1135px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.top-video-text-overlay-and-button div div:first-child {
+  width: 100%;
+  max-width: 710px;
+}
+
+.cta-wrapper {
+  margin-top: 10px;
+}
+
+.cta {
+  background-color: #9CDBD9 !important;
+  padding: 13px 49px 13px 49px !important;
+  text-align: center;
+  border-radius: 26.5px;
+  color: #0047BB !important;
+  font-family: 'proxima_novaextrabold' !important;
+  font-size: 16px;
+  letter-spacing: .5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.top-video-text-overlay-and-button-container .default-content-wrapper {
+  position: absolute;
+  z-index: 1000;
+  left: 210px;
+  color: #fff;
+  font-size: 19px;
+}
+
+.top-video-text-overlay-and-button-container a.text-white {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.top-video-text-overlay-and-button-container .play {
+  position: absolute;
+  background-image: url(/assets/imgs/play.png);
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 19px;
+  top: 240px;
+  left: 100px;
+  z-index: 3000;
+}
+
+.top-video-text-overlay-and-button-container .pause {
+  position: absolute;
+  background-image: url(/assets/imgs/pause.png);
+  background-repeat: no-repeat;
+  width: 76px;
+  height: 19px;
+  top: 240px;
+  left: 100px;
+  z-index: 3000;
+}
+
+@media screen and (max-width: 767px) {
+
+  .desktop-video {
+    display: none;
+  }
+
+  .mobile-video {
+     display: block;
+  }
+
+  .video-js {
+      min-height: 450px!important;
+      height: 50vh!important;
+  }
+
+  .video-js .vjs-tech {
+      width: 100%!important;
+      height: auto!important;
+      object-fit: fill;
+      top: 0;
+  }
+
+  .top-video-text-overlay-and-button-wrapper {
+    background-image: url("/assets/imgs/video-banner-overlay-mobile.png");
+    background-size: cover;
+    height: 205px;
+    bottom: 60px;
+    padding-top: 0;
+  }
+
+  .top-video-text-overlay-and-button-container .default-content-wrapper {
+    display: none;
+  }
+
+  .top-video-text-overlay-and-button  {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    width: 100%;
+    max-width: 282px;
+    margin: 25px auto;
+  }
+
+  .top-video-text-overlay-and-button > div {
+    display: block;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .cta-wrapper {
+    margin-top: 0;
+  }
+
+  .cta {
+      padding: 13px 21px 13px 21px;
+  }
+
+  .top-video-text-overlay-and-button-container .play,
+  .top-video-text-overlay-and-button-container .pause {
+    top: 140px;
+    left: auto;
+    right: 20px;
+  }
+}

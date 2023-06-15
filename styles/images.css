@@ -1,0 +1,14 @@
+
+.image-wrapper {
+    min-height: 75px;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.image-wrapper img {
+        margin-top: -20px;
+        z-index: 0;
+        position: relative;
+        margin-bottom: -3px;
+        width: 100%;
+}

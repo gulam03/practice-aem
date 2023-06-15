@@ -1,0 +1,87 @@
+body.homepage .section.top-image-text-overlay-container {
+  z-index: 1001;
+  padding: 86px 0 189px;
+  margin-top: -35px;
+  position: relative;
+  overflow-x: hidden;
+  background-image: url("/assets/imgs/blue-background-with-dots.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: 100% 100%;
+}
+
+body.homepage .top-image-text-overlay > div {
+  display: flex;
+}
+
+.top-image-text-overlay > div > div:first-child {
+  width: 110px;
+  overflow: visible;
+}
+
+.top-image-text-overlay > div > div > picture {
+  margin-top: -3px;
+  display: inline-block;
+  position: relative;
+  left: -57px;
+}
+
+.top-image-text-overlay > div > div > picture > img {
+  position: relative;
+  width: 216px;
+  max-width: 216px;
+}
+
+div.top-image-text-overlay-container > div.top-image-text-overlay-wrapper {
+  /* max-width: none !important; */
+  width: 100%;
+  z-index: 1;
+}
+
+div.top-image-text-overlay-wrapper h1 {
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: "proxima_novaextrabold";
+}
+
+.top-image-text-overlay p {
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  max-width: 900px;
+}
+
+.top-image-text-overlay-wrapper h4 {
+  font-size: 29px;
+  font-family: "proxima_novaextrabold";
+  line-height: 25px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 767px)
+{
+  body.homepage .section.top-image-text-overlay-container {
+      padding: 70px 0 100px;
+      background-image: url(/assets/imgs/once-daily-mobile.png);
+      margin-top: -95px;
+      margin-bottom: 50px;
+  }
+
+  div.top-image-text-overlay-wrapper h1 {
+    font-size: 22px;
+    line-height: 25px;
+    max-width: 340px;
+  }
+
+  .top-image-text-overlay p,
+  .top-image-text-overlay-wrapper h4 {
+    margin-left: -65px;
+    max-width: 350px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

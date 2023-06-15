@@ -1,0 +1,196 @@
+body .section > div.readyto-ask-wrapper {
+  width: 96%;
+  width: calc(100% - 20px);
+  margin: auto;
+}
+
+.readyto-ask-container {
+  padding: 0 !important;
+  margin-top: -96px;
+}
+
+.readyto-ask > div {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/assets/imgs/ready-to-ask.png");
+  background-repeat: no-repeat;
+  padding: 25px 20px 25px 20px;
+  background-size: 100% 100%;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.readyto-ask > div > div {
+  width: 40px;
+  max-width: 40px;
+}
+
+.readyto-ask > div > div:nth-child(2) {
+  flex-basis: initial;
+  flex-grow: initial;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-family: "proxima_novabold";
+  color: #fff;
+  line-height: 25px;
+  margin-bottom: 0;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.readyto-ask > div > div:nth-child(2):before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 27px;
+  background: #fff;
+  top: -35px;
+  box-sizing: border-box;
+}
+
+.readyto-ask > div > div:nth-child(2):after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 27px;
+  background: #fff;
+  top: 32px;
+  box-sizing: border-box;
+}
+
+.readyto-ask > div > div:first-child {
+  width: 490px;
+  max-width: 490px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.readyto-ask > div > div:first-child > h2,
+.readyto-ask > div > div:first-child > p {
+  grid-column: span 3 / span 3;
+}
+
+.readyto-ask > div > div:first-child > p.button-container {
+  grid-column: span 2 / span 2;
+}
+
+.readyto-ask > div > div:first-child > p:last-child {
+  grid-column: span 1 / span 1;
+  margin-left: -40px;
+}
+.readyto-ask > div > div:last-child > p.button-container {
+  margin-top: -25px;
+}
+
+.readyto-ask > div > div:last-child {
+  width: 370px;
+  max-width: 370px;
+}
+.readyto-ask > div > div > p.button-container a {
+  background-color: #9cdbd9;
+  color: #0047bb;
+  text-decoration: none;
+  border-radius: 31px;
+  padding: 16px 26px;
+  font-family: "proxima_novaextrabold";
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+.readyto-ask > div > div:last-child > p.button-container a {
+  padding: 16px 55px;
+}
+.readyto-ask > div > div > h2 {
+  color: #fff;
+  font-family: "proxima_novabold";
+  font-size: 30px;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.readyto-ask > div > div > p {
+  font-family: "proxima_novasemibold";
+  color: #fff;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 0;
+}
+.readyto-ask > div > div > p,
+.readyto-ask > div > div > h2 {
+  color: white;
+  padding: 10px;
+}
+.readyto-ask img {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .readyto-ask > div {
+    display: flex;
+    align-items: center;
+    flex-direction: unset;
+  }
+
+  .readyto-ask > div > div {
+    flex: 1;
+    margin-left: 32px;
+  }
+
+  .readyto-ask > div > div:first-of-type {
+    margin-left: unset;
+  }
+}
+
+@media (max-width: 899px) {
+  body .readyto-ask > div {
+    width: calc(100% - 40px);
+    margin-bottom: 20px;
+    margin: 0 20px;
+    border-radius: 50px;
+    flex-wrap: wrap;
+  }
+  body .readyto-ask > div > div:first-child,
+  body .readyto-ask > div > div:first-child,
+  body .readyto-ask > div > div:nth-child(2),
+  body .readyto-ask > div > div:last-child {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    grid: none;
+  }
+
+  .readyto-ask > div > div:first-child > p:last-child {
+    margin: 0;
+  }
+
+  body .readyto-ask > div > div > p {
+    padding: 5px;
+  }
+
+  .readyto-ask > div > div > p.button-container a {
+    margin: 0;
+  }
+
+  body .readyto-ask > div > div:nth-child(2) {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  body .readyto-ask > div > div:nth-child(2):before,
+  body .readyto-ask > div > div:nth-child(2):after {
+    display: none;
+    top: inherit;
+    box-sizing: border-box;
+  }
+
+  body .readyto-ask > div > div:last-child > p.button-container {
+    margin: 2px !important;
+  }
+}

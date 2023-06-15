@@ -1,0 +1,262 @@
+#persistent-isi {
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  -webkit-box-shadow: -1px 1px 6px 0px rgb(132 132 132 / 75%);
+  -moz-box-shadow: -1px 1px 6px 0px rgb(132 132 132 / 75%);
+  box-shadow: -1px 1px 6px 0px rgb(132 132 132 / 75%);
+}
+
+#persistent-isi * {
+  box-sizing: border-box;
+  transition: height 0.3s linear;
+}
+
+/* ----- states of visibility    ------------ */
+
+/* none before paint  */
+#persistent-isi {
+  display: none !important;
+}
+
+#persistent-isi.persistent-isi--loaded {
+  display: block !important;
+}
+
+#persistent-isi.persistent-isi--open {
+  /* updated by JS so we don't set to use about ease animation */
+  /* height: 80vh; */
+}
+
+body #persistent-isi.persistent-isi--scroll-hidden {
+  /* display: none !important; */
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  z-index: -9999;
+}
+
+/* ----- primary containers  ------------ */
+
+.persistent-isi-bottom-inner,
+.persistent-isi-top-inner {
+  position: relative;
+}
+
+.persistent-isi-top-text {
+  max-width: 75rem;
+  margin: auto;
+  padding: 0 10px;
+  position: relative;
+}
+
+.persistent-isi-top {
+  position: relative;
+  min-height: 25px;
+  margin-top: 2px;
+}
+
+/* ----- required structure for a no-height overflow scroll inside fixed   ------------ */
+
+.isi-wrapper-js-container {
+  display: flex;
+  flex-direction: column;
+  /* dynamic after set */
+  height: 20vh;
+}
+
+.persistent-isi-left {
+  height: 35px;
+}
+.persistent-isi-right {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  margin: auto;
+  padding: 15px 0;
+}
+
+.persistent-isi-right .persistent-isi-bottom {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: calc(75rem - 20px);
+  max-width: 100%;
+  padding-right: 10px;
+}
+
+/* ----- gnarly scrollbar - is transparent until expanded  ------------ */
+
+.persistent-isi-right .persistent-isi-bottom::-webkit-scrollbar {
+  width: 0;
+}
+
+.persistent-isi-right .persistent-isi-bottom::-webkit-scrollbar-track {
+  box-shadow: none;
+  opacity: 0;
+}
+
+.persistent-isi-right .persistent-isi-bottom::-webkit-scrollbar-thumb {
+  background-color: white;
+  outline: none;
+}
+
+/* - */
+
+.persistent-isi--open
+  .persistent-isi-right
+  .persistent-isi-bottom::-webkit-scrollbar {
+  width: 5px;
+}
+
+.persistent-isi--open
+  .persistent-isi-right
+  .persistent-isi-bottom::-webkit-scrollbar-track {
+  background-color: #d8d8d8;
+  border-radius: 12px;
+}
+
+.persistent-isi--open
+  .persistent-isi-right
+  .persistent-isi-bottom::-webkit-scrollbar-thumb {
+  background-color: #0048bb;
+  width: 5px;
+  outline: none;
+}
+
+/* ----- controls toggle  ------------ */
+
+.persistent-isi-top {
+  background: #f4f4f4;
+  color: #0047bb;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 0;
+  font-family: "proxima_novaextrabold";
+}
+
+a#toggle-controls-persistent-isi:hover:before {
+  content: "Expand";
+  display: inline-block;
+  color: #0047bb !important;
+  position: absolute;
+  margin-top: -5px;
+  left: -57px;
+  font-family: "proxima_novaregular";
+  font-size: 14px;
+}
+
+.persistent-isi--open a#toggle-controls-persistent-isi:hover:before {
+  content: "Collapse";
+  left: -63px;
+}
+
+a#toggle-controls-persistent-isi {
+  width: 18px;
+  height: 17px;
+  position: absolute;
+  top: 7px;
+  right: 1px;
+  padding: 2px 7px;
+  background: transparent url(/assets/imgs/isi-up.png) 0 0 no-repeat;
+  background-size: 84%;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.persistent-isi--open a#toggle-controls-persistent-isi {
+  background: transparent url(/assets/imgs/isi-down.png) 0 0 no-repeat;
+  background-size: 84%;
+}
+
+/* ----- match isi-section minus h2  ------------ */
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text {
+  font-family: "proxima_novaregular";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-size-adjust: 100%;
+}
+
+div:not(.persistent-isi--open) .persistent-isi-right .persistent-isi-bottom {
+  max-width: calc(99vw - 10px);
+  margin-left: 10px;
+}
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text p {
+  font-family: "proxima_novaregular";
+  font-size: 18px;
+  margin-bottom: 7px;
+  line-height: 22px;
+  color: #000;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+}
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text b,
+.persistent-isi-bottom-inner .persistent-isi-bottom-text strong {
+  font-family: "proxima_novabold";
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text h2 {
+  display: none !important;
+}
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text h3 {
+  color: #0047bb;
+  font-size: 20px;
+  font-family: "proxima_novabold";
+}
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text a {
+  text-decoration: underline;
+  color: #000;
+}
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text ul {
+  display: inline-block;
+  padding-top: 0;
+  margin-top: 5px;
+  padding-left: 0;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text li {
+  width: 100%;
+  cursor: auto;
+  font-family: "proxima_novaregular";
+  color: #000;
+  line-height: 22px;
+  font-size: 18px;
+  padding-left: 11px;
+  position: relative;
+}
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text ul li:before {
+  color: #333132;
+  content: ".";
+  position: absolute;
+  font-family: "proxima_novaregular";
+  font-size: 24px;
+  line-height: 9px;
+  left: 0;
+}
+
+.persistent-isi-bottom-inner .persistent-isi-bottom-text p img {
+  max-width: 1000px;
+  margin: 10px 0;
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
+}

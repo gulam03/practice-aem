@@ -1,0 +1,123 @@
+body.homepage main .section.seeing-is-believing {
+  background-image: url(/assets/imgs/seeing-is-believing.png);
+  /* margin-top: -124px; */
+  padding-top: 120px;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: 100% 100%;
+  padding-bottom: 120px;
+  margin-top: -145px;
+  z-index: 1;
+  position: relative;
+}
+
+.seeing-is-believing h2 {
+  color: #fff;
+  font-family: "proxima_novaextrabold";
+  font-size: 35px;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1023px) {
+  .seeing-is-believing h2 {
+    font-size: 20px;
+    line-height: 35px;
+  }
+}
+
+.seeing-is-believing > .default-content-wrapper {
+  position: relative;
+}
+
+.seeing-is-believing .default-content-wrapper h2::before {
+  content: "";
+  position: absolute;
+  width: 88px;
+  height: 2px;
+  background: #f4364c;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -1px;
+}
+
+.seeing-is-believing p {
+  font-family: "proxima_novasemibold";
+  color: #fff;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1023px) {
+  .seeing-is-believing p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.seeing-is-believing p,
+.seeing-is-believing h2 {
+  padding: 15px 10px 10px 10px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1023px) {
+  .seeing-is-believing p,
+  .seeing-is-believing h2 {
+    padding: 3px 3px 3px 3px;
+  }
+}
+
+.seeing-is-believing a.button.secondary {
+  background-color: #f4364c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 26.5px;
+  padding: 14px 81px;
+  font-family: "proxima_novaextrabold";
+  font-size: 19px;
+  letter-spacing: 0.59px;
+  border: none;
+  white-space: normal;
+  line-height: 1.25;
+}
+
+.seeing-is-believing .image-caption {
+  background-color: #0047bb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 0;
+  z-index: 2;
+  position: relative;
+  color: #fff;
+}
+
+.seeing-is-believing .image-caption {
+  color: #fff;
+  font-size: 16px;
+  font-family: "proxima_novasemibold";
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1023px) {
+  .seeing-is-believing .image-caption {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1023px) {
+  .inset-block.seeing-is-believing .button-container {
+    padding-bottom: 10px;
+  }
+}
+
+.inset-block.seeing-is-believing h2 {
+  padding-top: 0;
+}

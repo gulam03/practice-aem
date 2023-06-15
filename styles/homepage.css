@@ -1,0 +1,9 @@
+body.homepage main .section {
+    padding: 64px 16px;
+}
+
+@media (min-width: 600px) {
+    body.homepage main .section {
+        padding: 64px 32px;
+    }
+}

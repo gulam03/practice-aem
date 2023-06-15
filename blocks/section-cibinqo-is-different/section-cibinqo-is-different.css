@@ -1,0 +1,111 @@
+.section-cibinqo-is-different-container {
+  background-image: url("/assets/imgs/is-different.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+  padding: 51px 50px;
+  min-height: 60vw;
+}
+
+@media (min-width: 1400px) {
+  body .section-cibinqo-is-different-container {
+    padding-top: 20px;
+    min-height: inherit;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .section-cibinqo-is-different-container {
+    background-image: none;
+    background: #ffefdf;
+    min-height: 60vw;
+  }
+}
+
+.section-cibinqo-is-different {
+  max-width: 650px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .section-cibinqo-is-different {
+    max-width: 380px;
+  }
+}
+
+.section-cibinqo-is-different-container h1 {
+  color: #0047bb;
+  font-family: "proxima_novaextrabold";
+  font-size: 35px;
+  line-height: 41px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 20px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1023px) {
+  .section-cibinqo-is-different-container h1 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.section-cibinqo-is-different-container p {
+  width: 100%;
+  max-width: 782px;
+  margin: auto auto 10vw auto;
+  font-family: "proxima_novasemibold";
+  color: #333132;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .section-cibinqo-is-different-container p {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1023px) {
+  .section-cibinqo-is-different-container p {
+    font-size: 12px;
+    line-height: 15px;
+    max-width: 505px;
+  }
+}
+
+.section-cibinqo-is-different-container .button-container a {
+  background-color: #0047bb;
+  border: none;
+  border-radius: 27.5px;
+  font-family: "proxima_novaextrabold";
+  display: flex;
+  margin: 0 auto;
+  padding: 15px 37px 15px 0;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.section-cibinqo-is-different-container .button-container a:after {
+  content: "";
+  background-image: url(/assets/imgs/video-icon.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  right: 34px;
+}

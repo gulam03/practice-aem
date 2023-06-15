@@ -1,0 +1,5 @@
+ sitemaps:
+   sitemap:
+     origin: https://main--adobe-cibinqo-poc--pfizer.hlx.page
+     source: /query-index.json
+     destination: /sitemap-test.xml

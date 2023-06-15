@@ -1,0 +1,19 @@
+.section.form-container h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.section.form-container p {
+    margin: 0 0 20px 0;
+}
+
+.section.form-container .form-wrapper {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}

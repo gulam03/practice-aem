@@ -1,0 +1,81 @@
+.accordion {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 11px 24px #0047bb24;
+    border-radius: 10px;
+    border-color: #fff;
+    border: none;
+    position: relative;
+}
+
+.accordion-title > div {
+    font-size: 21px;
+    color: #0047BB;
+    display: flex;
+    align-items: center;
+    line-height: 25px;
+    font-weight: 700;
+    padding: 20px 28px 21px 38px;
+    position: relative;
+    cursor: pointer;
+    font-family: 'proxima_novaextrabold';
+}
+
+.accordion-title > div:after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    z-index: 7;
+    display: block;
+    background-image: url(/assets/imgs/accordion-chevron.png);
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 10px;
+}
+
+.accordion-title.active > div:after {
+    background-image: url(/assets/imgs/accordion-chevron-up.png);
+}
+
+.accordion-body  {
+    margin-bottom: 13px;
+    padding: 10px 67px 20px 38px;
+    color: #333;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.accordion-body p {
+    font-family: 'proxima_novaregular';
+    font-size: 18px;
+    line-height: 27px;
+    color: #333132;
+    padding-bottom: 0;
+    margin-bottom: 13px;
+}
+.accordion .collapsed {
+    display: none;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.default-content-wrapper + .accordion-wrapper {
+    margin-top: 50px;
+}

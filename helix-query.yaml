@@ -1,0 +1,7 @@
+indices:
+  sitemap:
+    properties:
+      url:
+        select: main
+        value: |
+          path

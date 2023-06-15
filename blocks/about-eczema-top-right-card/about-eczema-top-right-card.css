@@ -1,0 +1,13 @@
+.about-eczema-top-right-card-wrapper {
+  display: inline-block;
+  width: 45% !important;
+}
+
+.about-eczema-top-right-card div:first-child p {
+  margin-bottom: 20px;
+  color: #333132;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: 'proxima_novasemibold';
+  width: 495px;
+}

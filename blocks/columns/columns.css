@@ -1,0 +1,25 @@
+footer .columns > div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .columns img {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  footer .columns > div {
+    display: flex;
+    align-items: center;
+    flex-direction: unset;
+  }
+
+  footer .columns > div > div {
+    flex: 1;
+    margin-left: 32px;
+  }
+
+  footer .columns > div > div:first-of-type {
+    margin-left: unset;
+  }
+}
