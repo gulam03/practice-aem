@@ -1,0 +1,10 @@
+{
+  "tabWidth": 2,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "linebreak-style": "error unix",
+  "printWidth": 180,
+  "noMixedOperators": false,
+  "trailingComma": "es5"
+}
