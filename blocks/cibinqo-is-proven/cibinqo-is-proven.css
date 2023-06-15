@@ -1,0 +1,102 @@
+body.homepage main > div.cibinqo-is-proven-container {
+  background-image: url("/assets/imgs/pool.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: 100% 100%;
+  padding: 260px 0;
+  margin-top: -150px;
+  position: relative;
+}
+
+.cibinqo-is-proven-container .cibinqo-is-proven-wrapper {
+  margin-top: -100px;
+}
+
+.cibinqo-is-proven-container h2 {
+  font-size: 29px;
+  font-family: "proxima_novaextrabold";
+  line-height: 25px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cibinqo-is-proven-container h2 {
+  margin-top: 10px;
+}
+
+.cibinqo-is-proven-wrapper {
+  position: relative;
+}
+
+.cibinqo-is-proven > div:before {
+  content: '';
+  position: absolute;
+  width: 88px;
+  height: 2px;
+  background: #F4364C;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -20px;
+}
+
+.cibinqo-is-proven > div:nth-child(3) {
+  margin-top: 20px;
+}
+.cibinqo-is-proven > div:nth-child(3) > div p {
+  display: none;
+  justify-content: center;
+  width: 100%;
+}
+
+.cibinqo-is-proven > div:nth-child(3) > div p:first-child {
+  display: flex;
+}
+.cibinqo-is-proven > div:nth-child(3) > div p:nth-child(2) {
+  display: none;
+}
+
+.cibinqo-is-proven h5 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cibinqo-is-proven h5 a {
+    background-color: #F4364C;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 26.5px;
+    padding: 14px 88px;
+    font-family: 'proxima_novaextrabold';
+    font-size: 19px;
+    letter-spacing: .59px;
+    display:block;
+}
+
+
+@media screen and (max-width: 767px) {
+  body.homepage main > div.cibinqo-is-proven-container {
+        background-image: url(/assets/imgs/proven-mobile.png);
+        background-size: cover;
+        margin-top: -120px;
+        padding: 260px 0 200px;
+    }
+
+    .cibinqo-is-proven-container h2 {
+      font-size: 23px;
+      line-height: 25px;
+      margin-top: 0px;
+    }
+
+    .clearerskin-desktop {
+        display: none;
+    }
+    .cibinqo-is-proven > div:nth-child(3) > div p:first-child {
+      display: none;
+    }
+    .cibinqo-is-proven > div:nth-child(3) > div p:nth-child(2) {
+      display: flex;
+    }
+}

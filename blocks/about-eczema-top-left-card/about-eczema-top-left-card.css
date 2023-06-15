@@ -1,0 +1,49 @@
+.about-eczema-top-left-card div:first-child div:first-child {
+  color: #0683ad;
+  font-size: 24.07px;
+  font-family: 'proxima_novabold';
+}
+
+.about-eczema-top-left-card div:nth-child(2) h3 {
+  color: #0683ad !important;
+  font-size: 70px !important;
+  font-family: proxima_novaextrabold !important;
+}
+
+.about-eczema-top-left-card div:nth-child(3) div {
+  font-family: proxima_novabold;
+  color: #f4364c;
+  font-size: 22.98px;
+  line-height: 21.88px;
+}
+
+.about-eczema-top-left-card div:nth-child(4) h4 {
+  color: #0683AD;
+  font-size: 22.07px!important;
+  line-height: 29.54px;
+  font-family: 'proxima_novaextrabold';
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.about-eczema-top-left-card-wrapper {
+  display: inline-block;
+  width: 475px !important;
+  margin-right: 30px !important;
+}
+
+.about-eczema-top-left-card {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10.94px;
+  border-top-left-radius: 10.94px;
+  border-top-right-radius: 10.94px;
+  border-bottom-right-radius: 10.94px;
+  border-bottom-left-radius: 10.94px;
+  padding: 40px 20px !important;
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+  -webkit-box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+  -moz-box-shadow: 0 10px 20px 0 rgba(0,0,0,.1);
+  width: 100%;
+  margin-right: 50px;
+}

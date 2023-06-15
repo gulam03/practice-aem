@@ -1,0 +1,38 @@
+.search.block {
+    padding-top: 20px;
+}
+
+.search form {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search.block form input {
+    margin: 0 20px;
+    width:60%;
+}
+
+#search-results {
+    margin: 20px;
+    padding-top: 20px;
+}
+
+#search-results div:first-child {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+#search-results div{
+    margin-bottom: 20px;
+}
+
+.section.search-container h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    padding: 0;
+}

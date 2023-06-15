@@ -1,0 +1,557 @@
+/* header and nav layout */
+
+body header {
+  height: auto;
+  width: 100%;
+  background: transparent;
+  overflow-y: visible;
+  max-width: 100%;
+  position: relative;
+  z-index: 200;
+}
+
+body header ul,
+body header li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body .nav-tools {
+  width: 100%;
+  border-bottom: 1px solid #eeeeee;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 15%);
+}
+
+/* // -------- i-am-main-menu ------------------ // */
+
+body .i-am-main-menu {
+  margin-top: 0;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  padding: 2px 0;
+  max-width: 1170px;
+}
+
+body .i-am-main-menu img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.i-am-main-menu div * {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.i-am-main-menu > div {
+  max-width: 1170px;
+  display: inline-flex;
+  margin: auto;
+  text-align: left;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1000px) {
+  .i-am-main-menu > div {
+    max-width: 100%;
+    overflow-y: visible;
+    overflow-x: clip;
+  }
+}
+
+.i-am-main-menu > div div {
+  display: inline-flex;
+  padding: 3px 0;
+}
+
+.i-am-main-menu > div div:first-child {
+  width: 165px;
+  display: inline-block;
+  height: inherit;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.i-am-main-menu > div ul {
+  display: flex;
+  width: 100%;
+  clear: both;
+  position: relative;
+  z-index: 10;
+  padding: 9px 0 2px 0;
+  align-items: center;
+  height: 73px;
+  place-content: space-between;
+  /* for dropdowns  */
+  overflow-y: visible;
+}
+
+.i-am-main-menu ul a {
+  position: relative;
+}
+
+/* special for homeIcon */
+.i-am-main-menu > div ul > li.main-menu-list-home {
+  margin-right: 0;
+}
+
+.i-am-main-menu > div ul > li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: none;
+  margin-right: 0;
+  float: initial;
+  position: relative;
+  margin: 10px 0;
+}
+
+.i-am-main-menu > div ul.menu-structure > li {
+  max-height: 55px;
+}
+
+.i-am-main-menu > div ul > li.has-children > a {
+  padding-right: 45px;
+}
+
+.i-am-main-menu > div ul > li.has-children > a:before {
+  position: absolute;
+  content: "\e313";
+  font-size: 23px;
+  top: 50%;
+  right: 18px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: "icomoon";
+}
+
+/* active  */
+.i-am-main-menu > div ul > li.has-children.has-children--opened > a {
+  color: #f4364c;
+  /* font-family: "proxima_novaextrabold"; */
+  outline: none;
+}
+
+.i-am-main-menu > div ul > li.has-children.has-children--opened > a:before {
+  transform: rotate(180deg);
+  top: 17px;
+}
+
+.i-am-main-menu > div ul > li.has-children.has-children--opened > a:after {
+  content: "";
+  border: none;
+  display: block !important;
+  position: absolute;
+  height: 2px;
+  background-color: #f4364c;
+  top: 93%;
+  width: 80px;
+  left: 29px;
+}
+
+/* unfortunately due to the positioning we have to target by class to nudge  */
+
+.i-am-main-menu
+  > div
+  ul
+  > li.has-children.has-children--opened
+  > a.main-menu-link-about-cibinqo:after {
+  width: 63px;
+  left: 22px;
+}
+
+.i-am-main-menu
+  > div
+  ul
+  > li.has-children.has-children--opened
+  > a.main-menu-link-talk-to-your-doctor:after {
+  width: 81px;
+  left: 33px;
+}
+
+.i-am-main-menu
+  > div
+  ul
+  > li.has-children.has-children--opened
+  > a.main-menu-link-savings-support:after {
+  width: 63px;
+  left: 29px;
+}
+
+/* * * * * */
+
+.i-am-main-menu
+  > div
+  ul
+  > li.has-children.has-children--opened:first-child
+  > a:after {
+  left: 43px;
+}
+
+.i-am-main-menu ul.menu-structure > li:after {
+  content: "";
+  height: 19px;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  background-color: #c1c1c1;
+}
+
+.i-am-main-menu ul.menu-structure {
+  margin: 0;
+}
+
+.i-am-main-menu ul.menu-structure > li:first-child:after,
+.i-am-main-menu ul.menu-structure > li:last-child:after {
+  display: none;
+  opacity: 0;
+}
+
+.i-am-main-menu > div ul li a {
+  color: #0047bb;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  font-family: "proxima_novamedium";
+  font-weight: 600;
+  display: block;
+  padding: 10px 20px 10px 20px;
+  line-height: 125%;
+  display: inline-flex;
+  text-transform: uppercase;
+}
+
+.i-am-main-menu > div ul li a.home-icon {
+  background: transparent url(/assets/imgs/home-navigation-icon.png) 50% 50%
+    no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 34px;
+  height: 30px;
+  padding: 18px;
+  margin: 0;
+  display: inline-block;
+}
+
+.i-am-main-menu .menu-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin-left: 57px;
+  min-height: 81px;
+}
+
+.i-am-main-menu > div ul li ul {
+  position: absolute;
+  top: calc(100% + 10px);
+  position: absolute;
+  text-align: left;
+  box-shadow: 0 0 4px 0 rgb(0 0 0 / 25%);
+  padding: 0;
+  margin-top: 6px;
+  background: #fff;
+  border-radius: 0;
+  border-top: 3px solid #0047bb;
+  padding: 0 15px 6px 15px;
+  height: inherit;
+  width: 225px;
+  left: -29px;
+  display: none;
+}
+
+/* weird spacing with first */
+.i-am-main-menu ul.menu-structure li.main-menu-list-about-cibinqo > ul {
+  left: -42px;
+}
+
+.i-am-main-menu > div ul li.has-children--opened > ul {
+  display: block;
+}
+
+.i-am-main-menu > div ul li ul li {
+  position: relative;
+  cursor: initial;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 6px;
+  padding-top: 4px;
+  border-bottom: 1px solid #c1c1c1;
+  width: 100%;
+  display: inline-block;
+}
+
+.i-am-main-menu > div ul li ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.i-am-main-menu > div ul li ul li a {
+  padding: 9px 0 0 0;
+  font-size: 14px;
+  font-family: "proxima_novamedium";
+  font-weight: 400;
+  letter-spacing: normal;
+  -webkit-transition: 0s all;
+  -o-transition: 0s all;
+  transition: 0s all;
+  color: #0047bb;
+  position: relative;
+}
+
+.i-am-main-menu > div ul li ul li a:hover {
+  color: #f4364c;
+  font-family: "proxima_novaextrabold";
+  font-weight: 400;
+}
+
+.i-am-main-menu > div ul li ul li a:hover:after {
+  content: "";
+  border: none;
+  display: block !important;
+  height: 2px;
+  background-color: #f4364c;
+  width: 100%;
+  top: 105%;
+  left: inherit;
+  position: absolute;
+}
+
+/* /// */
+
+.i-am-main-menu div > picture {
+  display: inline-block;
+  max-width: 155px;
+  height: inherit;
+}
+
+/* // -------- blue-top-menu ------------------ // */
+
+header .blue-top-menu {
+  display: inline-flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #0047bb;
+  height: 40px;
+  line-height: 17px;
+  display: flex;
+  width: 100%;
+}
+
+header .blue-top-menu > div {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 5px;
+  margin: auto;
+  display: inline-flex;
+  background: transparent;
+  justify-content: center;
+}
+
+header .blue-top-menu li,
+header .blue-top-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+header .blue-top-menu ul.menu-structure-blue-top > li,
+header .blue-top-menu ul.menu-structure-blue-top > li > a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "proxima_novaregular";
+  font-weight: normal;
+  line-height: 159%;
+}
+
+header .blue-top-menu ul.menu-structure-blue-top > li {
+  max-height: 25px;
+}
+
+header .blue-top-menu ul.menu-structure-blue-top > li,
+header .blue-top-menu ul.menu-structure-blue-top > li > a {
+  position: relative;
+}
+
+header .blue-top-menu ul.menu-structure-blue-top > li:after {
+  content: "|";
+  display: inline-block;
+  color: #fff;
+  padding: 0 12px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 999px) {
+  header .blue-top-menu ul.menu-structure-blue-top > li:after {
+    padding: 0 0 0 5px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 850px) {
+  header .blue-top-menu .menu-wrapper-blue-top > ul.menu-structure-blue-top {
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 26px;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+}
+
+header .blue-top-menu ul.menu-structure-blue-top > li:last-child:after {
+  content: "";
+  padding: 0 0 0 12px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 999px) {
+  header .blue-top-menu ul.menu-structure-blue-top > li:last-child:after {
+    content: "";
+    padding: 0 0 0 3px;
+  }
+}
+
+header
+  .blue-top-menu
+  ul.menu-structure-blue-top
+  > li
+  > a.toggle-children-link-blue:before {
+  content: "";
+  position: absolute;
+  background: transparent url(/assets/imgs/spanish-arrow.jpg?1) right 0
+    no-repeat;
+  width: 12px;
+  height: 8px;
+  cursor: pointer;
+  right: -14px;
+  top: 5px;
+  background-size: 80% 80%;
+}
+
+header
+  ul.menu-structure-blue-top
+  > li.has-children--opened
+  > a.toggle-children-link-blue:before {
+  background: transparent url(/assets/imgs/spanish-arrow-up.jpg?1) 79% 80%
+    no-repeat;
+  top: 4px;
+  right: -16px;
+}
+/* //  */
+
+header .blue-top-menu li ul {
+  position: absolute;
+  background-color: #0047bb;
+  min-width: 215px;
+  padding-top: 7px;
+  z-index: 1;
+  left: -70px;
+  padding-left: 14px;
+  padding-right: 14px;
+  /* -- */
+  display: none;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 999px) {
+  header .blue-top-menu li ul {
+    left: -130px;
+  }
+}
+
+header .blue-top-menu li.has-children--opened > ul {
+  display: block;
+}
+
+header .blue-top-menu li ul li {
+  text-align: center;
+  border-bottom: 1px solid #0683ad;
+  padding: 5px 0;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "proxima_novaregular";
+}
+
+header .blue-top-menu li > ul > li > a {
+  padding: 3px 0;
+  font-size: 14px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "proxima_novaregular";
+  line-height: 135%;
+  display: inline-block;
+}
+
+header .blue-top-menu li > ul > li > a:hover {
+  text-decoration: underline;
+  font-family: "proxima_novaextrabold";
+}
+
+/* // -------- disclaimer ------------------ // */
+
+header .disclaimer {
+  background: #f4f4f4;
+  width: 100%;
+  margin: 0 auto;
+  border: none;
+  padding: 13px 0 9px 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+.disclaimer > div {
+  max-width: 841px;
+  margin: auto;
+  font-size: 14px;
+  font-family: "proxima_novabold";
+  color: #000;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 100%;
+  padding: 0 15px;
+  line-height: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.disclaimer a#close-disclaimer {
+  width: 58px;
+  padding: 5px;
+  top: -8px;
+  position: relative;
+  margin-left: 8px;
+  opacity: 1;
+  width: 31px;
+}
+
+.disclaimer a#close-disclaimer img {
+  width: 21px;
+  max-width: 21px;
+}
+
+.disclaimer a#close-disclaimer:hover {
+  opacity: 0.9;
+}
+
+/* // -------------------------------------- // */
+
+header .nav-brand {
+  z-index: 15;
+  position: relative;
+}
+
+body header .nav-hamburger {
+  display: none !important;
+  opacity: 0 !important;
+}

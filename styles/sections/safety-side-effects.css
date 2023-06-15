@@ -1,0 +1,60 @@
+.safety-and-side-effects .default-content-wrapper,
+.safety-and-side-effects .accordion-wrapper
+{
+    max-width: 979px;
+}
+
+.safety-and-side-effects
+
+/* SECTION learn-about-safety  */
+
+.learn-about-safety {
+    position: relative;
+}
+
+.learn-about-safety:before {
+    content: "";
+    background-image: url(/assets/imgs/safety-side-effects-bg.png);
+    position: absolute;
+    width: 214px;
+    height: 154px;
+    background-size: cover!important;
+    left: -25px;
+    top: 0;
+    background-repeat: no-repeat!important;
+}
+
+body.internal .learn-about-safety p:first-of-type {
+    font-size: 18px;
+    color: #0683AD;
+    font-family: 'proxima_novaextrabold';
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.learn-about-safety p:first-of-type:before {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: #F4364C;
+    margin-right: 15px;
+    position: absolute;
+    left: -80px;
+}
+
+
+body.internal h2 {
+    color: #0047BB!important;
+    font-size: 26px;
+    margin-bottom: 0;
+    display: block;
+    font-family: 'proxima_novaextrabold';
+    text-align: left;
+    position: relative;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    line-height: 25px;
+}

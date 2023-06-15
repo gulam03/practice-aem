@@ -1,0 +1,202 @@
+.discover-container {
+  padding: 0 !important;
+  position: relative;
+  top: -96px;
+}
+
+.discover-wrapper {
+  background-image: url("/assets/imgs/discover-wrapper.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  margin: 0 !important;
+  max-width: none !important;
+  min-height: 60vw;
+  flex-grow: 1;
+  flex-basis: 100%;
+  padding: 40px 0 240px 0 !important;
+}
+
+@media (min-width: 1400px) {
+  body .discover-wrapper {
+    padding-top: 20px;
+    min-height: inherit;
+  }
+}
+
+@media (max-width: 991px) {
+  .discover-wrapper {
+    background-image: url("/assets/imgs/discover-wrapper-mini.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    min-height: inherit;
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding: 82px 0 73px !important;
+    display: block;
+  }
+}
+
+.discover-wrapper:before {
+  content: "";
+  background: transparent url("/assets/imgs/save-hand.png") 0 top no-repeat;
+  background-size: 100%;
+  width: 45vw;
+  height: 36vw;
+  position: absolute;
+  max-width: 745px;
+  top: 0;
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+  .discover-wrapper:before {
+    max-width: 30vw;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 990px) {
+  .discover-wrapper:before {
+    max-width: 225px;
+    height: 175px;
+    width: 225px;
+    top: -60px;
+  }
+}
+
+@media (max-width: 991px) {
+  .discover-wrapper:before {
+    max-width: 30vw;
+  }
+}
+
+.discover {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .discover {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .discover {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .discover {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .discover {
+    max-width: 1140px;
+  }
+}
+
+.discover > div {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px 0;
+}
+
+.discover > div > div {
+  width: 100%;
+  max-width: 637px;
+  float: right;
+  clear: both;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .discover > div > div {
+    display: block;
+  }
+}
+
+.discover > div > div > p,
+.discover > div > div > h2 {
+  color: #fff;
+  grid-column: span 2 / span 2;
+  font-family: "proxima_novasemibold";
+  padding: 10px;
+}
+
+.discover > div > div > p {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 0;
+}
+
+.discover > div > div > h2 {
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: "proxima_novaextrabold" !important;
+}
+
+.discover > div > div > p.button-container {
+  grid-column: span 1 / span 1;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .discover > div > div > p.button-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.discover > div > div > p > strong {
+  font-family: "proxima_novaextrabold" !important;
+}
+
+.discover > div > div > p:last-child {
+  grid-column: span 1 / span 1;
+  font-size: 14.5px;
+  line-height: 18px;
+  text-indent: -5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.discover > div > div > p.button-container a {
+  background-color: #f4364c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 26.5px;
+  padding: 14px 86px;
+  font-family: "proxima_novaextrabold" !important;
+  font-size: 19px;
+  letter-spacing: 0.59px;
+  margin-top: 0;
+  display: block;
+  border: 0;
+}
+
+.discover h2 {
+  color: #fff;
+  font-family: "proxima_novaextrabold";
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.discover a {
+  color: #9cdbd9;
+  text-decoration: underline;
+  font-family: "proxima_novaextrabold";
+}
+
+.discover img {
+  width: 100%;
+}

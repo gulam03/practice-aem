@@ -1,0 +1,135 @@
+.error-page-body {
+  position: relative;
+}
+
+.error-page-body .page-title {
+  position: relative;
+  padding-top: 28px;
+  padding-bottom: 57px;
+}
+
+.error-page-body .page-title h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 50px;
+  line-height: 50px;
+  font-family: 'proxima_novaextrabold';
+  color: #0047BB;
+  letter-spacing: -.6px;
+  width: 100%;
+  max-width: 850px;
+}
+
+.error-page-body .page-title:before {
+  content: "" !important;
+  width: 70px;
+  height: 3px;
+  position: absolute;
+  left: 0%;
+  background: #F4364C !important;
+  top: 0;
+  display: block !important;
+  right: 0;
+  margin: 0 auto;
+}
+
+.error-wrapper {
+  padding-top: 65px;
+  position: relative;
+}
+
+.error-content {
+  font-family: 'proxima_novaextrabold';
+  font-size: 18px;
+  color: #333132;
+  line-height: 25px;
+  max-width: 850px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.error-page-body a.back-to-home {
+  border-radius: 31px;
+  text-decoration: none;
+  color: #fff;
+  padding: 11px 70px;
+  background: #F4364C;
+  font-family: "proxima_novaextrabold";
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: .59px;
+  width: 283px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+}
+
+.error-content:nth-child(4) {
+  margin-top: 45px;
+  padding-bottom: 35px;
+}
+
+.error-page-body .main-content {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: #0683AD;
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: 47px;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'proxima_novaextrabold';
+}
+
+a:any-link {
+  color: #035fe6;
+  text-decoration: none;
+  position: relative;
+}
+
+.error-page-body .main-content a:not(:last-child):after {
+  content: '';
+  height: 27px;
+  width: 2px;
+  position: absolute;
+  left: 150px;
+  top: 10px;
+  background-color: #9CDBD9;
+}
+/* .imp_and_safety {
+flex-wrap: nowrap;
+position: relative;
+}
+.imp_and_safety_box {
+padding-left: 2%;
+padding-right: 2%;
+position: relative;
+}
+.imp_and_safety_box h2 {
+color: #0047BB;
+text-transform: uppercase;
+font-family: 'proxima_novaextrabold';
+font-size: 20px;
+margin-bottom: 10px;
+line-height: 22px;
+}
+.imp_and_safety_box p, .imp_and_safety_box p a {
+font-family: 'proxima_novaregular';
+line-height: 22px;
+font-size: 18px;
+}
+.imp_and_safety_box li {
+width: 100%;
+cursor: auto;
+font-family: 'proxima_novaregular';
+color: #333132;
+line-height: 22px;
+font-size: 18px;
+padding-left: 11px;
+position: relative;
+} 

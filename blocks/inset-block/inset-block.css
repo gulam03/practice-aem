@@ -1,0 +1,63 @@
+.inset-block {
+  background-color: #fff;
+  width: 100%;
+  max-width: 874px;
+  margin: 0 auto;
+  -webkit-box-shadow: -1px 8px 11px 5px rgb(0 0 0 / 20%);
+  -moz-box-shadow: -1px 8px 11px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 8px 11px 5px rgb(0 0 0 / 20%);
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1023px) {
+  .inset-block {
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+}
+
+.inset-block > div {
+  width: 100%;
+  max-width: 778px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* @media only screen and (min-width: 1px) and (max-width: 1023px) {
+@media only screen and (min-width: 1024px) and (max-width: 1365px) { */
+
+.inset-block.rounded {
+  border-radius: 19.17px;
+}
+
+.inset-block h2 {
+  color: #0047bb;
+  font-family: "proxima_novaextrabold";
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+
+.inset-block p {
+  color: #0047bb;
+  font-size: 20px;
+  font-family: "proxima_novasemibold";
+  line-height: 22px;
+  padding-bottom: 30px;
+  width: 100%;
+  max-width: 810px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1023px) {
+  .inset-block h2 {
+    font-size: 24px;
+    line-height: 35px;
+    padding-bottom: 10px;
+  }
+  .inset-block p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
