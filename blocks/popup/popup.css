@@ -1,0 +1,43 @@
+body > #popup-wrapper {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  height: 0;
+  overflow: hidden;
+}
+
+body.modal-open > #popup-wrapper {
+  display: block;
+  height: 100%;
+  overflow: inherit;
+}
+
+#popup-wrapper .modal-wrapper {
+  background: #fff;
+  color: black;
+  margin: 0 20px;
+  position: relative;
+  z-index: 100;
+  padding: 100px;
+  border-radius: 25px;
+  width: calc(100% - 40px);
+  margin: auto;
+  max-width: 600px;
+  margin-top: calc(10vh);
+}
+
+#popup-wrapper .modal-wrapper .header {
+  margin: 0;
+  padding: 0 0 25px 0;
+  font-size: 30px;
+}
+
+#popup-wrapper .modal-wrapper .description {
+  margin: 20px 0;
+}
