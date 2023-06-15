@@ -1,0 +1,16 @@
+{
+    "plugins": [
+        {
+            "id": "support-chat",
+            "title": "Support Chat",
+            "event": "support-chat",
+            "environments": [
+                "admin",
+                "edit",
+                "preview",
+                "live",
+                "prod"
+            ]
+        }
+    ]
+}
