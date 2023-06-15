@@ -1,0 +1,24 @@
+name: "Testing"
+on:
+  push:
+    # This will make the workflow to not trigger on tags.
+    branches:
+      - "*"
+jobs:
+  testing:
+    name: "Automated tests"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: php-actions/composer@v6
+      -
+        name: "Run Test"
+        run: |
+          cp "${GITHUB_WORKSPACE}/.github/scripts/test-script.sh" "/tmp/test-script.sh"
+          chmod +x "/tmp/test-script.sh"
+          php --version
+          composer --version
+          sudo composer install --prefer-dist -vvv || exit 1
+          sudo composer run-script post-create-project-cmd || exit 1
+          cp "/tmp/test-script.sh" "${GITHUB_WORKSPACE}"
+          "${GITHUB_WORKSPACE}/test-script.sh"

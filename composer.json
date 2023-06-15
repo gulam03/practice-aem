@@ -1,0 +1,29 @@
+{
+    "name": "pfizer/pfizer-skel-adobe",
+    "description": "Pfizer Edison Adobe skeleton project template for composer.",
+    "license": "GPL-2.0+",
+    "type": "project",
+    "require": {
+        "jkribeiro/composer-hydration": "~1"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "hydrate": "Jkribeiro\\Composer\\ComposerHydration::meatOnBones",
+        "cleanup": [
+            "find . -name '*.dist' -type f | while read DIST_NAME ; do mv ${DIST_NAME} ${DIST_NAME%.dist} ; done",
+            "rm -rf vendor composer.lock composer.json CHANGELOG.* .github/scripts"
+        ],
+        "post-create-project-cmd": [
+            "@composer run-script hydrate -- --replace={{SITE_NAME}}:$( echo \"${PWD##*/}\" | sed 's/ednlt\\-//g' )",
+            "@composer run-script hydrate -- --replace={{SKEL_VERSION}}:$( echo $(sed -n -e 's/.*### \\([0-9].*\\), 2.*/\\1/p' CHANGELOG.md | head -1) )",
+            "@cleanup"
+        ]
+    },
+    "extra": {
+        "_readme": [
+            "This project is for Pfizer private use only.",
+            "Despite the GPL-2.0 license, under no circumstances should the contents of this project including code, documentation or any other file contained herein be distributed, copied, shared or transferred in electronic or other format."
+        ]
+    }
+}

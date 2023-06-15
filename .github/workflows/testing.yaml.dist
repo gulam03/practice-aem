@@ -1,0 +1,57 @@
+name: "Testing"
+# Triggered when code is pushed to any branch in a repository
+on: push
+env:
+  AWS_REGION: "us-east-1"
+  AWS_ACCESS_KEY_ID: ${{ secrets.EDISON_GH_TESTING_AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.EDISON_GH_TESTING_AWS_SECRET_KEY }}
+  PFIZER_AWS_SNS_TOPIC: ${{ secrets.EDISON_GH_TESTING_AWS_SNS_TOPIC }}
+  PFIZER_GITHUB_TOKEN: ${{ secrets.EDISON_GH_TESTING_TOKEN }}
+  EDISON_ACTIONS_VERSION: "3.x"
+jobs:
+  initial-notification:
+    name: "Notification workflow started"
+    runs-on: ubuntu-latest
+    steps:
+      -
+        uses: EdisonLabs/sns-publish-workflow-status-action@v1
+        with:
+          TOPIC_ARN: ${{ env.PFIZER_AWS_SNS_TOPIC }}
+          INITIAL_JOB: true
+  testing:
+    name: "Automated tests"
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: "Checkout local repo"
+        uses: actions/checkout@v3
+        with:
+         token: ${{ env.PFIZER_GITHUB_TOKEN }}
+         submodules: 'recursive'
+      -
+        name: "Setup node"
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      -
+        name: "Node install"
+        run: npm install
+      -
+        name: "Run lint"
+        run: npm run lint
+      -
+        name: "Run tests"
+        run: npm test
+        env:
+          CI: true
+  final-notification:
+    name: "Notification workflow result"
+    runs-on: ubuntu-latest
+    # Always runs after jobs have completed, regardless of whether they were successful.
+    if: always()
+    needs: [initial-notification, testing]
+    steps:
+      -
+        uses: EdisonLabs/sns-publish-workflow-status-action@v1
+        with:
+          TOPIC_ARN: ${{ env.PFIZER_AWS_SNS_TOPIC }}
