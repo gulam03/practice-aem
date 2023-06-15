@@ -1,0 +1,25 @@
+.find-doctor-widget {
+  width: 100%;
+  max-width: 950px;
+}
+
+.find-doctor-widget .doctor-widget--first h1 {
+  font-size: 40px;
+  line-height: 50px;
+  color: #0047bb;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.find-doctor-widget .doctor-widget--first p {
+  color: #0047bb;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.find-doctor-widget .doctor-widget--last {
+  font-size: 14.5px;
+  color: #333132;
+  margin-bottom: 6px;
+  line-height: 18px;
+}
